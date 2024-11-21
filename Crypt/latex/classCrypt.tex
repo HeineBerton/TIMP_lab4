@@ -1,0 +1,188 @@
+\hypertarget{classCrypt}{}\doxysection{Класс Crypt}
+\label{classCrypt}\index{Crypt@{Crypt}}
+
+
+Шифрование методом табличной маршрутной перестановки  
+
+
+
+
+{\ttfamily \#include $<$crypt.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCrypt_aeb31a9acfa9d99954d7fd267260ee11d}\label{classCrypt_aeb31a9acfa9d99954d7fd267260ee11d}} 
+{\bfseries Crypt} ()=delete
+\begin{DoxyCompactList}\small\item\em Запрет на использование конструктора по умолчанию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCrypt_a481d4b14b004433aa29bc5e7c51bb349}{Crypt}} (const std\+::string \&key\+Str)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \mbox{\hyperlink{classCrypt}{Crypt}}. \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCrypt_a7c2fe602f36f4bf4619c263c9d6b368e}{encrypt}} (const std\+::wstring \&text)
+\begin{DoxyCompactList}\small\item\em Зашифрование текста \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCrypt_acf4f76ab57faefcfba95df1dd33f4566}{decrypt}} (const std\+::wstring \&encrypted\+\_\+text)
+\begin{DoxyCompactList}\small\item\em Расшифрование текста \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCrypt_a9fb388f58f33f6f33cf57aa0e8c87845}{get\+Valid\+Key}} (const int \&key, const std\+::wstring \&text)
+\begin{DoxyCompactList}\small\item\em Валидация ключа \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCrypt_a349973ca1946fe8708cb63b3d1da86ab}{get\+Valid\+Open\+Text}} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Валидация открытого текста \end{DoxyCompactList}\item 
+std\+::wstring \mbox{\hyperlink{classCrypt_ac045727f9481f598425ef25d08e5e9a7}{get\+Valid\+Cipher\+Text}} (const std\+::wstring \&s)
+\begin{DoxyCompactList}\small\item\em Валидация зашифрованного текста \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Шифрование методом табличной маршрутной перестановки 
+
+Класс {\ttfamily \mbox{\hyperlink{classCrypt}{Crypt}}} реализует шифрование и расшифрование текста с использованием метода табличной маршрутной перестановки. Ключ задается в конструкторе, а методы {\ttfamily encrypt} и {\ttfamily decrypt} используются для шифрования и расшифрования текста соответственно.
+
+\begin{DoxyWarning}{Предупреждения}
+Реализация предназначена только для русского языка. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classCrypt_a481d4b14b004433aa29bc5e7c51bb349}\label{classCrypt_a481d4b14b004433aa29bc5e7c51bb349}} 
+\index{Crypt@{Crypt}!Crypt@{Crypt}}
+\index{Crypt@{Crypt}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{Crypt()}{Crypt()}}
+{\footnotesize\ttfamily Crypt\+::\+Crypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key\+Str }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса \mbox{\hyperlink{classCrypt}{Crypt}}. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key\+Str} & Строка, представляющая ключ для шифрования. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classCryptException}{Crypt\+Exception}}} & Если ключ недействителен. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classCrypt_acf4f76ab57faefcfba95df1dd33f4566}\label{classCrypt_acf4f76ab57faefcfba95df1dd33f4566}} 
+\index{Crypt@{Crypt}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily std\+::wstring Crypt\+::decrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{encrypted\+\_\+text }\end{DoxyParamCaption})}
+
+
+
+Расшифрование текста 
+
+Метод расшифровывает переданный зашифрованный текст с использованием установленного ключа.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em encrypted\+\_\+text} & Зашифрованный текст для расшифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Открытый текст в виде строки. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCrypt_a7c2fe602f36f4bf4619c263c9d6b368e}\label{classCrypt_a7c2fe602f36f4bf4619c263c9d6b368e}} 
+\index{Crypt@{Crypt}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily std\+::wstring Crypt\+::encrypt (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Зашифрование текста 
+
+Метод шифрует переданный текст с использованием установленного ключа.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em text} & Открытый текст для шифрования. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Зашифрованный текст в виде строки. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCrypt_ac045727f9481f598425ef25d08e5e9a7}\label{classCrypt_ac045727f9481f598425ef25d08e5e9a7}} 
+\index{Crypt@{Crypt}!getValidCipherText@{getValidCipherText}}
+\index{getValidCipherText@{getValidCipherText}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{getValidCipherText()}{getValidCipherText()}}
+{\footnotesize\ttfamily std\+::wstring Crypt\+::get\+Valid\+Cipher\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Валидация зашифрованного текста 
+
+Проверяет, что зашифрованный текст содержит только допустимые символы.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Зашифрованный текст для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Проверенный зашифрованный текст. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classCryptException}{Crypt\+Exception}}} & Если зашифрованный текст содержит недопустимые символы. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCrypt_a9fb388f58f33f6f33cf57aa0e8c87845}\label{classCrypt_a9fb388f58f33f6f33cf57aa0e8c87845}} 
+\index{Crypt@{Crypt}!getValidKey@{getValidKey}}
+\index{getValidKey@{getValidKey}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{getValidKey()}{getValidKey()}}
+{\footnotesize\ttfamily int Crypt\+::get\+Valid\+Key (\begin{DoxyParamCaption}\item[{const int \&}]{key,  }\item[{const std\+::wstring \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Валидация ключа 
+
+Проверяет, является ли ключ допустимым для шифрования текста.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em key} & Ключ для проверки. \\
+\hline
+{\em text} & Открытый текст, для которого проверяется ключ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Допустимый ключ. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classCryptException}{Crypt\+Exception}}} & Если ключ недействителен. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classCrypt_a349973ca1946fe8708cb63b3d1da86ab}\label{classCrypt_a349973ca1946fe8708cb63b3d1da86ab}} 
+\index{Crypt@{Crypt}!getValidOpenText@{getValidOpenText}}
+\index{getValidOpenText@{getValidOpenText}!Crypt@{Crypt}}
+\doxysubsubsection{\texorpdfstring{getValidOpenText()}{getValidOpenText()}}
+{\footnotesize\ttfamily std\+::wstring Crypt\+::get\+Valid\+Open\+Text (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Валидация открытого текста 
+
+Проверяет, что открытый текст содержит только допустимые символы.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em s} & Открытый текст для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Проверенный открытый текст. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em \mbox{\hyperlink{classCryptException}{Crypt\+Exception}}} & Если открытый текст содержит недопустимые символы. \\
+\hline
+\end{DoxyExceptions}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{crypt_8h}{crypt.\+h}}\item 
+crypt.\+cpp\end{DoxyCompactItemize}
